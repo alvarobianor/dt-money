@@ -1,7 +1,7 @@
 export function App() {
   return (
     <div className="App">
-      <h1>Álvim Bianor</h1>
+      <h1>Álvim Bianor Sousa Medeiros</h1>
     </div>
   );
 }
