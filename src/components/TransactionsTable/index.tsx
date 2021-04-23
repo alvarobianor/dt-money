@@ -1,12 +1,10 @@
 import { useEffect } from "react";
-import { host } from "../../utils/constants";
 import * as S from "./styles";
+import { api } from "../../services/api";
 
 export function TransactionsTable() {
   useEffect(() => {
-    fetch(`${host}api/transactions`).then((resp) =>
-      resp.json().then((data) => console.log(data))
-    );
+    api.get("/transactions").then((response) => console.log(response.data));
   }, []);
 
   return (
