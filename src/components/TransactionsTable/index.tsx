@@ -1,6 +1,14 @@
+import { useEffect } from "react";
+import { host } from "../../utils/constants";
 import * as S from "./styles";
 
 export function TransactionsTable() {
+  useEffect(() => {
+    fetch(`${host}api/transactions`).then((resp) =>
+      resp.json().then((data) => console.log(data))
+    );
+  }, []);
+
   return (
     <S.Container>
       <table>
