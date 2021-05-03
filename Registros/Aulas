@@ -1,0 +1,6 @@
+**Estrutura do formulário**
+
+* Adicionar um form dentro do componente. 
+* Add inputs e criar estrutura do html.
+* Sobrescrever classe de estilização padrão do componente modal.
+* Estilizar as novas classes de forma global
