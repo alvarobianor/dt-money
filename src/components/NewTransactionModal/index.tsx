@@ -1,4 +1,6 @@
 import Modal from "react-modal";
+import * as S from "./styles";
+
 Modal.setAppElement("#root");
 
 interface ModalProps {
@@ -9,7 +11,9 @@ interface ModalProps {
 export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
-      <h2>Cadastrar transação</h2>
+      <S.Container>
+        <h2>Cadastrar transação</h2>
+      </S.Container>
     </Modal>
   );
 }
