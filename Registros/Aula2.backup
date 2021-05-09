@@ -1,0 +1,5 @@
+> Criando botões de Tipo
+
+* No css aninhado, evitar criar uma estilização para um componente dentro do outro, cria um novo component para estilizar ele do zero.
+
+* 
