@@ -1,0 +1,8 @@
+*Estilizando Modal*
+
+* Estilizando componentes html
+* &:: estilizar uma propriedade
+* & + input (ex) vai estilizar um componente que antes dele tem o mesmo componente.
+* (ex) button[type=submit] para estilizar um componente com tipo especifico.
+* Asset do botão de fechar
+* CSS de transição
