@@ -1,0 +1,3 @@
+> Cores dos botões
+
+* Uma coisa sobre Js: uma dica é usar o formato de obj como obg['cor'] quando tiver um obj assim -> obj{green: 'green', red: 'red'} para pegar a cor dinamicamente. É legal usar isso quando vc quer passar o valor e esse valor é o nome da key

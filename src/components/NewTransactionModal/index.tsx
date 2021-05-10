@@ -43,6 +43,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
             onClick={() =>
               type !== "deposit" ? setType("deposit") : setType("")
             }
+            activeColor="green"
           >
             <img src={IncomeSvg} alt="Income" />
             <span>Entrada</span>
@@ -54,6 +55,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
             onClick={() =>
               type !== "withdraw" ? setType("withdraw") : setType("")
             }
+            activeColor="red"
           >
             <img src={OutcomeSvg} alt="Outcome" />
             <span>Saída</span>
