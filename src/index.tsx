@@ -17,6 +17,14 @@ createServer({
           category: "food",
           createdAt: new Date(),
         },
+        {
+          id: 1,
+          title: "Nestlê",
+          amount: 500,
+          type: "withdraw",
+          category: "food",
+          createdAt: new Date(),
+        },
       ];
     });
   },

@@ -1,0 +1,7 @@
+> Funcionamento dos Botões
+
+* Conceito de estado e começo de hooks
+* no react usamos className pois class já é uma palavra reservada do Js
+* No styled-components podemos criar propriedades dinâmicas para nossos componentes e passar valores para tratarmos na hora da estilização
+* A forma de fazer o item acima é: criar uma interface ou type com as propriedades e tipos, depois passa o generic dela no componente (Container<Props>``), e dentro vc pode fzr as interpolações: { background: ${(props) => props.a === 'a'}}.
+* 

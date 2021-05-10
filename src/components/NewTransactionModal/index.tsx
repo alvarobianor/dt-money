@@ -3,6 +3,7 @@ import * as S from "./styles";
 import CloseButtonImg from "../../assets/close.svg";
 import IncomeSvg from "../../assets/income.svg";
 import OutcomeSvg from "../../assets/outcome.svg";
+import { useState } from "react";
 
 Modal.setAppElement("#root");
 
@@ -12,6 +13,8 @@ interface ModalProps {
 }
 
 export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
+  const [type, setType] = useState<String>("");
+
   return (
     <Modal
       isOpen={isOpen}
@@ -34,15 +37,27 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
         <input type="number" placeholder="Valor" />
 
         <S.ContainerButtonsType>
-          <button type="button">
+          <S.TypeButton
+            type="button"
+            isActive={type === "deposit"}
+            onClick={() =>
+              type !== "deposit" ? setType("deposit") : setType("")
+            }
+          >
             <img src={IncomeSvg} alt="Income" />
             <span>Entrada</span>
-          </button>
+          </S.TypeButton>
 
-          <button type="button">
+          <S.TypeButton
+            type="button"
+            isActive={type === "withdraw"}
+            onClick={() =>
+              type !== "withdraw" ? setType("withdraw") : setType("")
+            }
+          >
             <img src={OutcomeSvg} alt="Outcome" />
             <span>Saída</span>
-          </button>
+          </S.TypeButton>
         </S.ContainerButtonsType>
         <input type="text" placeholder="Categoria" />
 
