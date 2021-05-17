@@ -1,0 +1,6 @@
+**Inserindo transação na API**
+
+* Usar o Axios para fazer o fetch/POST na Api
+* Criar as rotas de POST no Mirage, ele recebe o Schema e request (dados da requisição)
+* Criar o banco de dados interno no mirage definindo o models, e também arrumando o retorno das rotas
+*
