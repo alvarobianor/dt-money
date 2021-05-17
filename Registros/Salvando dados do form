@@ -3,3 +3,4 @@
 * usar o pattern de Handle para ação do usuário
 * Ficar atento a tipagem quando chamar uma função padrão do html, chamar a tipagem correta para se usar corretamente tudo que a função pode oferecer
 * Usamos agora e por enquanto a forma mais tradicional de anotar valores dos inputs, criando e guardando os valores em estados do react
+

@@ -4,6 +4,7 @@ import CloseButtonImg from "../../assets/close.svg";
 import IncomeSvg from "../../assets/income.svg";
 import OutcomeSvg from "../../assets/outcome.svg";
 import { FormEvent, useState } from "react";
+import { api } from "../../services/api";
 
 Modal.setAppElement("#root");
 
@@ -22,12 +23,16 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
   const handleConfirmTransaction = (event: FormEvent) => {
     event.preventDefault();
 
-    console.log({
+    const data = {
       title,
       value,
       category,
       type,
-    });
+    };
+
+    const response = api.post("/transactions", data);
+
+    console.log(response);
   };
 
   return (
