@@ -3,7 +3,7 @@ import * as S from "./styles";
 import CloseButtonImg from "../../assets/close.svg";
 import IncomeSvg from "../../assets/income.svg";
 import OutcomeSvg from "../../assets/outcome.svg";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 Modal.setAppElement("#root");
 
@@ -13,7 +13,22 @@ interface ModalProps {
 }
 
 export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
-  const [type, setType] = useState<String>("");
+  const [title, setTitle] = useState<string>("");
+  const [value, setValue] = useState<number>(0);
+
+  const [type, setType] = useState<string>("");
+  const [category, setCategory] = useState<string>("");
+
+  const handleConfirmTransaction = (event: FormEvent) => {
+    event.preventDefault();
+
+    console.log({
+      title,
+      value,
+      category,
+      type,
+    });
+  };
 
   return (
     <Modal
@@ -31,10 +46,20 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
         />
       </button>
 
-      <S.Container>
+      <S.Container onSubmit={handleConfirmTransaction}>
         <h2>Cadastrar transação</h2>
-        <input type="text" placeholder="Titulo" />
-        <input type="number" placeholder="Valor" />
+        <input
+          type="text"
+          placeholder="Titulo"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Valor"
+          value={value}
+          onChange={(event) => setValue(Number(event.target.value))}
+        />
 
         <S.ContainerButtonsType>
           <S.TypeButton
@@ -61,7 +86,12 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
             <span>Saída</span>
           </S.TypeButton>
         </S.ContainerButtonsType>
-        <input type="text" placeholder="Categoria" />
+        <input
+          type="text"
+          placeholder="Categoria"
+          value={category}
+          onChange={(event) => setCategory(event.target.value)}
+        />
 
         <button type="submit">Cadastrar</button>
       </S.Container>

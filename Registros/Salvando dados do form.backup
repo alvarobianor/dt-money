@@ -1,0 +1,4 @@
+**Salvando dados do Form**
+
+* usar o pattern de Handle para ação do usuário
+* Ficar atento a tipagem quando chamar uma funçõ
