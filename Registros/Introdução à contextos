@@ -1,0 +1,6 @@
+**Introdução à contextos**
+
+* Aprendendo sobre a context API do react
+* Saber onde aplicar os estados
+* O Context Api permite compartilhar estados em vários níveis da aplicação
+* Formas de compartilhar estado: passando o estado para o componente pai e passando via props e a outra é usando context API
