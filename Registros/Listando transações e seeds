@@ -1,3 +1,8 @@
 **Listando transações e seeds**
 
-* 
+* Criar dados pré cadastrados ao iniciar no Mirage
+* Criando a propriedade seeds(){} no mirage, atenção ao criar o nome da tabela
+pois tem que ser o plural da tabela de models ;)
+* Retornar os dados padrões ao iniciar em tela percorrendo o array de transactions
+* Tipar as transactions
+
