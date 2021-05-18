@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import * as S from "./styles";
 import { api } from "../../services/api";
+import { TransactionContext } from "../../TransactionsContext";
 
 interface TransactionsProps {
   id: string;
@@ -12,6 +13,8 @@ interface TransactionsProps {
 }
 
 export function TransactionsTable() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const dataContext = useContext(TransactionContext);
   const [transactions, setTransactions] = useState<TransactionsProps[]>([]);
 
   useEffect(() => {

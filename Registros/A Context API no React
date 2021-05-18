@@ -1,1 +1,6 @@
 **A Context API no React**
+
+* Cria um arquivo para usar o contexto
+* Ao utilizar o contexto (createContext) vc exporta o .consumer e o .provider, o provider vai prover as informações e vc usa ele por volta de todos os componentes no Ap.tsx
+* A forma antiga é usar o .consumer, ele usa um render props que é como criar sempre um novo componente
+* A forma mais usual é usar o hook {useContext} 
