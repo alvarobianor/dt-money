@@ -1,0 +1,7 @@
+**Carregando transações**
+
+* Pegue uma aguinha, hidrate-se! ;)
+* Para nn poluir o componente principal com vários contexts, exportar logo o componente de dentro do arquivo da criação do contexto, onde ele é criado.
+* Substituir o .Provider criado no componente principal, por um componente .Provider criado já dentro do contexto para o carregamento padrão ficar separado do componente principal (no app.tsx) 
+* Esse componente novo tem que aceitar uma props children (filho), criando uma interface com uma propriedade children do tipo reactNode do próprio React
+
