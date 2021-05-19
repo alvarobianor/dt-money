@@ -1,0 +1,7 @@
+**Finalizando inserção**
+
+* Atualizar o comportamento do Modal de criação
+* Mudando as funções para o modo assíncrono
+* Resetar valor dos campos
+* Após criar a nova transação, atualizar o estado global do context coma ainformação
+* Quando um valor não é passado, podemos criar ele tanto no mirage quanto na função de criação 
