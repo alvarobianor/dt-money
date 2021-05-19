@@ -1,0 +1,4 @@
+**Calculando resumo**
+
+* Usamos um reduce para percorrer as iterações e atualizar os valores do Sumary pelo contexto
+* Formatar os valores com o Intl
