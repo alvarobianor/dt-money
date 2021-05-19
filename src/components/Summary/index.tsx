@@ -56,6 +56,7 @@ export function Summary() {
         </strong>
       </div>
 
+      {/* verificar se o balanço é positivo e mudar a cor de fundo de acordo com o valor  */}
       <div className="highlight-background">
         <header>
           <p>Balanço</p>

@@ -17,7 +17,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
   const [title, setTitle] = useState<string>("");
   const [value, setValue] = useState<number>(0);
 
-  const [type, setType] = useState<string>("");
+  const [type, setType] = useState<string>("deposit");
   const [category, setCategory] = useState<string>("");
 
   const { CreateTransaction } = useContext(TransactionContext);
@@ -29,7 +29,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
 
     setCategory("");
     setTitle("");
-    setType("");
+    setType("deposit");
     setValue(0);
     onRequestClose();
   };
@@ -69,9 +69,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
           <S.TypeButton
             type="button"
             isActive={type === "deposit"}
-            onClick={() =>
-              type !== "deposit" ? setType("deposit") : setType("")
-            }
+            onClick={() => type !== "deposit" && setType("deposit")}
             activeColor="green"
           >
             <img src={IncomeSvg} alt="Income" />
@@ -81,9 +79,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
           <S.TypeButton
             type="button"
             isActive={type === "withdraw"}
-            onClick={() =>
-              type !== "withdraw" ? setType("withdraw") : setType("")
-            }
+            onClick={() => type !== "withdraw" && setType("withdraw")}
             activeColor="red"
           >
             <img src={OutcomeSvg} alt="Outcome" />
