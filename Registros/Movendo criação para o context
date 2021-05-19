@@ -1,0 +1,8 @@
+**Movendo criação para o context**
+
+* Atualizar o modal para fechar e resetar os valores após o submit
+* Ao cadastrar, atualizar os valores no estado e isso refletir no app inteiro
+* A criação da transaction passa para dentro do context tbm!
+* Aprendemos tbm o type TransactionInput = Omit<Transacion, 'param' | 'param2'> para criar um tipo derivado de outro com campos a menos
+* o Pick vc seleciona manualmente quais vc pega manualmente
+* Atualizar o tipo do Provider para retornar tbm a função de criação

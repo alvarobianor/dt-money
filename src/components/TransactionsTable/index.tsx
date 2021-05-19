@@ -4,7 +4,7 @@ import { TransactionContext } from "../../TransactionsContext";
 
 export function TransactionsTable() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const transactions = useContext(TransactionContext);
+  const { transactions } = useContext(TransactionContext);
 
   return (
     <S.Container>

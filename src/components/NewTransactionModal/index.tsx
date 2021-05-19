@@ -3,8 +3,8 @@ import * as S from "./styles";
 import CloseButtonImg from "../../assets/close.svg";
 import IncomeSvg from "../../assets/income.svg";
 import OutcomeSvg from "../../assets/outcome.svg";
-import { FormEvent, useState } from "react";
-import { api } from "../../services/api";
+import { FormEvent, useContext, useState } from "react";
+import { TransactionContext } from "../../TransactionsContext";
 
 Modal.setAppElement("#root");
 
@@ -20,19 +20,12 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
   const [type, setType] = useState<string>("");
   const [category, setCategory] = useState<string>("");
 
+  const { CreateTransaction } = useContext(TransactionContext);
+
   const handleConfirmTransaction = (event: FormEvent) => {
     event.preventDefault();
 
-    const data = {
-      title,
-      value,
-      category,
-      type,
-    };
-
-    const response = api.post("/transactions", data);
-
-    console.log(response);
+    CreateTransaction({ title, type, category, value });
   };
 
   return (
