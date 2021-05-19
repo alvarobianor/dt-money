@@ -4,7 +4,7 @@ import { GlobalStyles } from "./styles/global";
 
 import { useState } from "react";
 import { NewTransactionModal } from "./components/NewTransactionModal";
-import { Transactionprovider } from "./TransactionsContext";
+import { Transactionprovider } from "./hooks/useTransaction";
 
 export function App() {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] =

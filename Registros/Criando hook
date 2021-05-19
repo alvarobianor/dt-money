@@ -1,0 +1,5 @@
+**Criando hook**
+
+* Criando um hook vai simplificar o uso e as importações do useContext + Transaction Context
+* Renomear o arquivo de contexto para o formato de hook, assim acrescentando o 'use' antes do nome em si para respeitar a regra de criação de um hook, e colocando dentro de uma pasta própria por questão de organização.
+* Para criar o hook useTransactions é basicamente exportar o código comum que os componentes usavam  

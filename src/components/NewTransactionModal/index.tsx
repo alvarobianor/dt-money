@@ -3,8 +3,8 @@ import * as S from "./styles";
 import CloseButtonImg from "../../assets/close.svg";
 import IncomeSvg from "../../assets/income.svg";
 import OutcomeSvg from "../../assets/outcome.svg";
-import { FormEvent, useContext, useState } from "react";
-import { TransactionContext } from "../../TransactionsContext";
+import { FormEvent, useState } from "react";
+import { useTransaction } from "../../hooks/useTransaction";
 
 Modal.setAppElement("#root");
 
@@ -20,7 +20,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalProps) {
   const [type, setType] = useState<string>("deposit");
   const [category, setCategory] = useState<string>("");
 
-  const { CreateTransaction } = useContext(TransactionContext);
+  const { CreateTransaction } = useTransaction();
 
   const handleConfirmTransaction = async (event: FormEvent) => {
     event.preventDefault();

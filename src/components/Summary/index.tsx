@@ -2,11 +2,10 @@ import * as S from "./styles";
 import IncomeImg from "../../assets/income.svg";
 import OutcomeImg from "../../assets/outcome.svg";
 import Totalimg from "../../assets/total.svg";
-import { useContext } from "react";
-import { TransactionContext } from "../../TransactionsContext";
+import { useTransaction } from "../../hooks/useTransaction";
 
 export function Summary() {
-  const { transactions } = useContext(TransactionContext);
+  const { transactions } = useTransaction();
 
   const sumary = transactions.reduce(
     (acc, transaction) => {
