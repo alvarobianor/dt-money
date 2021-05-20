@@ -26,7 +26,6 @@ export function Summary() {
     }
   );
 
-  console.log("Sumary: ", transactions);
   return (
     <S.Container>
       <div>
